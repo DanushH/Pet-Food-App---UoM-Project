@@ -1,8 +1,12 @@
-The web site is designed for a Pet Food Shop. It allows users to browse different pet products, each displayed in a card format. Users can add products to a shopping cart, which appears as a modal pop-up. The shopping cart modal dynamically updates with the product's name and price, and displays a total price for all items added. The footer provides links to external social media pages of the shop.
+# Pet Food Store - Frontend Web App
 
-This design is responsive, clean, and uses Bootstrap to manage the layout and modal functionality for ease of use and aesthetics.
+* This project is developed as an assessement submission for the course of [Web Development - 1](https://open.uom.lk/fullstack-developer.html) by University of Moratuwa.
 
-## index page
+* The web site is designed for a Pet Food Shop. It allows users to browse different pet products, each displayed in a card format. Users can add products to a shopping cart, which appears as a modal pop-up. The shopping cart modal dynamically updates with the product's name and price, and displays a total price for all items added. The footer provides links to external social media pages of the shop.
+
+## Functionality
+
+### index page
 
 * The header displays the title of the page, "Pet Food Shop," with an animation.
 * The main content features product cards for different pet products.
@@ -11,13 +15,13 @@ This design is responsive, clean, and uses Bootstrap to manage the layout and mo
 * The modal shows a list of products added to a table with dynamic rows.
 
 
-## styles page
+### styles page
 
 * Header has a sliding animation (`slideIn`) that makes the title appear with a smooth transition from left.
 * Images in the product cards are standardized to a height of 200px, ensuring consistency.
 
 
-## scripts page
+### scripts page
 
 * Shopping cart functionality is dynamically managed by the script.
 * It initializes an empty array (`cart`) to store the products added by the user.
