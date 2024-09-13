@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pet Food Shop</title>
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header class="text-black text-center py-4">
+            <h1>Pet Food Shop</h1>
+        </header>
+
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img
+                            src="images/dog-food.jpg"
+                            class="card-img-top"
+                            alt="Dog Food"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Dog Food</h5>
+                            <p class="card-text">
+                                High-quality dog food with essential nutrients.
+                            </p>
+                            <button
+                                class="btn btn-info add-to-cart"
+                                data-name="Dog Food"
+                                data-price="1750"
+                            >
+                                Add to Cart - LKR 1750
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img
+                            src="images/cat-food.jpg"
+                            class="card-img-top"
+                            alt="Cat Food"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Cat Food</h5>
+                            <p class="card-text">
+                                Nutritious food for cats with vitamins and
+                                minerals.
+                            </p>
+                            <button
+                                class="btn btn-info add-to-cart"
+                                data-name="Cat Food"
+                                data-price="1500"
+                            >
+                                Add to Cart - LKR 1500
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img
+                            src="images/dog-harness.jpg"
+                            class="card-img-top"
+                            alt="Puppy Harness"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Puppy Harness</h5>
+                            <p class="card-text">
+                                No choke, breathable mesh, adjustable puppy
+                                harness.
+                            </p>
+                            <button
+                                class="btn btn-info add-to-cart"
+                                data-name="Puppy Harness"
+                                data-price="2500"
+                            >
+                                Add to Cart - LKR 2500
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img
+                            src="images/cat-shampoo.jpg"
+                            class="card-img-top"
+                            alt="Cat Shampoo"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Cat Shampoo</h5>
+                            <p class="card-text">
+                                Keep your furry friend clean and smelling fresh.
+                            </p>
+                            <button
+                                class="btn btn-info add-to-cart"
+                                data-name="Cat Shampoo"
+                                data-price="1500"
+                            >
+                                Add to Cart - LKR 1500
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img
+                            src="images/dog-shampoo.jpg"
+                            class="card-img-top"
+                            alt="Dog Shampoo"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Dog Shampoo</h5>
+                            <p class="card-text">
+                                Gentle degreasing shampoo helps soothe skin
+                                while deodorizing the coat.
+                            </p>
+                            <button
+                                class="btn btn-info add-to-cart"
+                                data-name="Dog Shampoo"
+                                data-price="2000"
+                            >
+                                Add to Cart - LKR 2000
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img
+                            src="images/cat-bed.jpg"
+                            class="card-img-top"
+                            alt="Cat Bed"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Cat Bed</h5>
+                            <p class="card-text">
+                                Round, washable, soft cat bed with customized
+                                pet name.
+                            </p>
+                            <button
+                                class="btn btn-info add-to-cart"
+                                data-name="Cat Bed"
+                                data-price="20000"
+                            >
+                                Add to Cart - LKR 20000
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="modal fade"
+                id="cartModal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="cartModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cartModalLabel">
+                                Shopping Cart
+                            </h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table id="cart-items" class="table">
+                                <!-- Cart items will be added here -->
+                            </table>
+                            <p class="mt-3">
+                                Total: LKR <span id="cart-total">0</span>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                data-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-success"
+                                id="checkout-btn"
+                            >
+                                Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-white text-center py-3">
+            <ul>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/" class="text-white">
+                        Instagram
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/" class="text-white">
+                        Facebook
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/" class="text-white">
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://web.whatsapp.com/" class="text-white">
+                        WhatsApp
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.viber.com/en/" class="text-white">
+                        Viber
+                    </a>
+                </li>
+            </ul>
+
+            <p>&copy; 2024 Pet Food Shop</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
